@@ -88,3 +88,18 @@ function factorial ( n ) {
 
 
 // ##########################################
+
+// Day 1: Let and Const
+
+// Write your code here. Read input using 'readLine()' and print output using 'console.log()'.
+const PI = Math.PI
+// Print the area of the circle:
+let r = readLine()
+let area = r ** 2 * PI
+console.log( area )
+// Print the perimeter of the circle:
+let perimeter = 2 * r * PI
+console.log( perimeter )
+
+
+// ##########################################
