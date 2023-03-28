@@ -71,3 +71,20 @@ function getPerimeter ( length, width ) {
 
 
 // ##########################################
+
+// Day 1: Functions
+
+/*
+ * Create the function factorial here
+ */
+function factorial ( n ) {
+    let res = n
+    while ( n > 1 ) {
+        res *= n - 1
+        n--
+    }
+    return res
+}
+
+
+// ##########################################
