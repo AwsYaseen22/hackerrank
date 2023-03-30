@@ -151,3 +151,25 @@ function getLetter ( s ) {
 
 
 // ##########################################
+
+// Day 2: Loops
+
+function vowelsAndConsonants ( s ) {
+    let v = 'aeiou'
+    let cons = ''
+    for ( let i = 0; i < s.length; i++ ) {
+        if ( v.includes( s[i] ) ) {
+            console.log( s[i] );
+        } else {
+            cons += s[i]
+        }
+    }
+    for ( let i = 0; i < cons.length; i++ ) {
+        console.log( cons[i] );
+    }
+}
+
+// console.log( vowelsAndConsonants( 'javascriptloops' ) );
+
+
+// ##########################################
