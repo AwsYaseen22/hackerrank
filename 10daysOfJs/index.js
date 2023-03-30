@@ -234,5 +234,13 @@ function Rectangle ( a, b ) {
     }
 }
 
+// ##########################################
+
+// Day 4: Count Objects
+
+function getCount ( objects ) {
+    return objects.filter( ( o ) => o.x === o.y ).length
+}
+
 
 // ##########################################
