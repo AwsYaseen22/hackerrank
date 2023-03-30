@@ -242,5 +242,17 @@ function getCount ( objects ) {
     return objects.filter( ( o ) => o.x === o.y ).length
 }
 
+// ##########################################
+
+// Day 4: Classes
+
+class Polygon {
+    constructor( lengths ) {
+        this.lengths = lengths
+    }
+    perimeter () {
+        return this.lengths.reduce( ( acc, cur ) => acc + cur, 0 )
+    }
+}
 
 // ##########################################
