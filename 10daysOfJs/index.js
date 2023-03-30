@@ -273,3 +273,13 @@ class Square extends Rectangle {
 
 
 // ##########################################
+
+// Day 5: Template Literals
+
+function sides ( literals, ...expressions ) {
+    let length = ( expressions[1] + ( Math.sqrt( expressions[1] ** 2 - 16 * expressions[0] ) ) ) / 4
+    let hight = ( expressions[1] - ( Math.sqrt( expressions[1] ** 2 - 16 * expressions[0] ) ) ) / 4
+    return [length, hight].sort( ( a, b ) => a - b )
+}
+
+// ##########################################
