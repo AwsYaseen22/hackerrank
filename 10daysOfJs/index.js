@@ -173,3 +173,19 @@ function vowelsAndConsonants ( s ) {
 
 
 // ##########################################
+
+// Day 3: Arrays
+
+function getSecondLargest ( nums ) {
+    // Complete the function
+    let sorted = nums.sort( ( a, b ) => b - a )
+    let max = sorted[0]
+    for ( let n of sorted ) {
+        if ( n < max ) {
+            return n
+        }
+    }
+}
+
+// ##########################################
+// ##########################################
