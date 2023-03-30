@@ -188,4 +188,22 @@ function getSecondLargest ( nums ) {
 }
 
 // ##########################################
+
+// Day 3: Try, Catch, and Finally
+
+function reverseString ( s ) {
+    try {
+        // s = String(s)
+        // console.log(typeof s, s)
+        let rev = s.split( '' ).reverse().join( '' )
+        console.log( rev )
+    } catch ( error ) {
+        console.log( error.message )
+        console.log( s )
+    }
+}
+
+// console.log( reverseString( '12345' ) );
+// console.log( reverseString( 12345 ) );
+
 // ##########################################
