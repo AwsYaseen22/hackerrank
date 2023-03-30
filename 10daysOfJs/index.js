@@ -283,3 +283,17 @@ function sides ( literals, ...expressions ) {
 }
 
 // ##########################################
+
+// Day 5: Arrow Functions
+
+const modifyArray = ( nums ) => nums.map( n => {
+    if ( n % 2 === 0 ) {
+        return n * 2
+    } else {
+        return n * 3
+    }
+} )
+
+
+
+// ##########################################
