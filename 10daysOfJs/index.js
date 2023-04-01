@@ -294,6 +294,36 @@ const modifyArray = ( nums ) => nums.map( n => {
     }
 } )
 
+// ##########################################
 
+// Day 6: Bitwise Operators
+
+function getMaxLessThanK ( n, k ) {
+    let max = 0
+    for ( let i = 1; i <= n; i++ ) {
+        for ( let j = i + 1; j <= n; j++ ) {
+            console.log( i & j )
+            if ( ( i & j ) < k ) {
+                max = Math.max( max, ( i & j ) )
+            }
+        }
+    }
+    return max
+}
+
+// console.log( getMaxLessThanK( 8, 5 ) );
+
+// ##########################################
+
+// Day 6: JavaScript Dates
+
+function getDayName ( dateString ) {
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    let dayName;
+    // Write your code here
+    let date = new Date( dateString )
+    dayName = days[date.getDay()]
+    return dayName;
+}
 
 // ##########################################
