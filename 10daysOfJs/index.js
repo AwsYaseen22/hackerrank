@@ -420,3 +420,66 @@ function regexVar () {
 */
 
 // ##########################################
+
+//  Day 8: Buttons Container
+
+/*
+// CSS
+#btns{
+  width: 75%;
+  position: relative;
+  text-align: center;
+}
+
+.btn{
+  width: 30%;
+  height: 48px;
+  font-size: 24px;
+  color: black;
+  position: relative;
+  margin: 0 3px;
+}
+
+// JS
+  let arr = [1,2,3,6,9,8,7,4]
+  let ids = [1,2,3,6,9,8,7,4]
+
+  let btns = document.getElementById('btns')
+
+  for(let n = 1; n<=9; n++){
+    let btn = document.createElement('button')
+    btn.id = 'btn'+n
+    btn.classList.add('btn')
+    btn.innerText = n
+    btns.appendChild(btn)
+  }
+
+
+  let btn5 = document.getElementById('btn5')
+  const rotate = ()=>{
+    arr.unshift(arr.pop())
+    for(let i = 0; i <= 7; i++){
+      document.getElementById('btn'+ids[i]).innerText = arr[i]
+    }
+  }
+  btn5.addEventListener('click', rotate)
+
+//   html
+<!-- Enter your HTML code here -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Buttons Grid</title>
+        <link rel="stylesheet" href="css/buttonsGrid.css" type="text/css">
+    </head>
+    <body>
+        <div id="btns">
+        </div>
+        <script src="js/buttonsGrid.js" type="text/javascript"></script>
+    </body>
+</html>
+
+*/
+
+// ##########################################
