@@ -483,3 +483,119 @@ function regexVar () {
 */
 
 // ##########################################
+
+//  Day 9: Binary Calculator
+
+/*
+
+// HTML
+<!-- Enter your HTML code here -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+<title>Binary Calculator</title>
+        <link rel="stylesheet" href="css/binaryCalculator.css" type="text/css">
+    </head>
+    <body>
+        <div id="container">
+          <div id="res"></div>
+          <div id="btns">
+            <div id="row1">
+              <button id="btn0" class="btns" onclick="display(0)">0</button>
+              <button id="btn1" class="btns" onclick="display(1)">1</button>
+              <button id="btnClr" class="btns" onclick="clearDis()">C</button>
+              <button id="btnEql" class="btns" onclick="calculate()">=</button>
+            </div>
+            <div id="row2">
+              <button id="btnSum" class="btns" onclick="display('+')">+</button>
+              <button id="btnSub" class="btns" onclick="display('-')">-</button>
+              <button id="btnMul" class="btns" onclick="display('*')">*</button>
+              <button id="btnDiv" class="btns" onclick="display('/')">/</button>
+            </div>
+          </div>
+        </div>
+        <script src="js/binaryCalculator.js" type="text/javascript"></script>
+    </body>
+</html>
+
+// CSS
+body{
+  width: 33%;
+}
+#container{
+  width: 100%;
+  background-color: green;
+  position: relative;
+  text-align: center;
+}
+#res{
+  background-color: lightgray;
+  border: solid black;
+  height: 48px;
+  font-size: 20px;
+}
+
+
+.btns{
+  width: 25%;
+  height: 36px;
+  font-size: 18px;
+  position: relative;
+  margin: 0;
+  float: left;
+}
+
+#btn0, #btn1{
+  background-color: lightgreen;
+  color: brown;
+}
+#btnClr, #btnEql{
+  background-color: darkgreen;
+  color: white;
+}
+
+#btnSum, #btnSub, #btnMul, #btnDiv{
+  background-color: black;
+  color: red;
+}
+
+// JS
+
+let dis = ''
+let res
+
+
+function display(n){
+  dis += n
+  document.getElementById('res').innerText = dis
+}
+
+function clearDis(){
+  dis = ""
+  document.getElementById('res').innerText = dis
+}
+
+function calculate(){
+  let nums = dis.split(/[*+\-/]/)
+let op = dis.replace( nums[0], '' ).replace( nums[1], '' )
+// console.log(nums, op)
+// console.log(nums[0].toString(10))
+let n1 = parseInt( nums[0], 2 )
+let n2 = parseInt( nums[1], 2 )
+console.log( n1, n2 )
+res = eval( `${n1}${op}${n2}` )
+res = res.toString( 2 )
+document.getElementById( 'res' ).innerText = res
+}
+
+
+
+
+
+
+*/
+
+
+
+// ##########################################
