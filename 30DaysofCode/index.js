@@ -31,6 +31,49 @@ function processData ( input ) {
 }
 
 
-console.log( processData( '30\n1\n4\n9\n16\n25\n36\n49\n64\n81\n100\n121\n144\n169\n196\n225\n256\n289\n324\n361\n400\n441\n484\n529\n576\n625\n676\n729\n784\n841\n907\n' ) );
+// console.log( processData( '30\n1\n4\n9\n16\n25\n36\n49\n64\n81\n100\n121\n144\n169\n196\n225\n256\n289\n324\n361\n400\n441\n484\n529\n576\n625\n676\n729\n784\n841\n907\n' ) );
+
+// ###############################################################
+
+// Day 26: Nested Logic
+
+function processData ( input ) {
+    let [ret, due] = input.split( '\n' )
+    let [d1, m1, y1] = due.split( ' ' ).map( n => +n )
+    let [d2, m2, y2] = ret.split( ' ' ).map( n => +n )
+    let fine = 0
+    if ( y2 < y1 ) {
+        fine = 0
+    } else if ( y2 > y1 ) {
+        fine = 10000
+    } else {
+        if ( m2 < m1 ) {
+            fine = 0
+            // console.log( 'here' );
+        } else if ( m2 > m1 ) {
+            fine = ( m2 - m1 ) * 500
+        } else {
+            if ( d2 > d1 ) {
+                fine = ( d2 - d1 ) * 15
+            }
+        }
+    }
+    // if ( y2 <= y1 && m2 <= m1 && d2 <= d1 ) {
+    //     fine = 0
+    // } else if ( y2 > y1 ) {
+    //     fine = 10000
+    // } else if ( m2 > m1 ) {
+    //     fine = ( m2 - m1 ) * 500
+    // } else if ( d2 > d1 ) {
+    //     fine = ( d2 - d1 ) * 15
+    // } else if ( d2 < d1 ) {
+    //     fine = 0
+    // }
+    console.log( fine );
+}
+
+// console.log( processData( "9 6 2015\n6 6 2015" ) );
+console.log( processData( "31 12 2009\n1 1 2010" ) );
+// console.log( processData( "24 12 1898\n18 9 1898" ) );
 
 // ###############################################################
