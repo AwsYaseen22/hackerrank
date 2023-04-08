@@ -77,3 +77,25 @@ console.log( processData( "31 12 2009\n1 1 2010" ) );
 // console.log( processData( "24 12 1898\n18 9 1898" ) );
 
 // ###############################################################
+
+// Day 28: RegEx, Patterns, and Intro to Databases
+
+function main () {
+    const N = parseInt( readLine().trim(), 10 );
+    let arr = []
+    for ( let NItr = 0; NItr < N; NItr++ ) {
+        const firstMultipleInput = readLine().replace( /\s+$/g, '' ).split( ' ' );
+
+        const firstName = firstMultipleInput[0];
+
+        const emailID = firstMultipleInput[1];
+        if ( /@gmail\.com/g.test( emailID ) ) {
+            arr.push( firstName )
+        }
+    }
+    arr.sort()
+    console.log( arr.join( '\n' ) )
+}
+
+
+// ###############################################################
