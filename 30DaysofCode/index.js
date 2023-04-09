@@ -78,6 +78,38 @@ console.log( processData( "31 12 2009\n1 1 2010" ) );
 
 // ###############################################################
 
+// Day 27: Testing
+
+// this done frm the discussion in typescript as there is not js(node) for this
+// Not the main should end with console.log('OK')
+
+// class TestDataEmptyArray {
+//     get_array (): number[] {
+//         return [];
+//     };
+// };
+
+// class TestDataUniqueValues {
+//     get_array (): number[] {
+//         return [3, 6, 9, 2, 4, 8];
+//     };
+
+//     get_expected_result (): number {
+//         return 3;
+//     };
+// };
+
+// class TestDataExactlyTwoDifferentMinimums {
+//     get_array (): number[] {
+//         return [4, 3, 4, 5, 4, 3];
+//     };
+
+//     get_expected_result (): number {
+//         return 1;
+//     };
+// };
+
+// ###############################################################
 // Day 28: RegEx, Patterns, and Intro to Databases
 
 function main () {
@@ -128,8 +160,8 @@ function bitwiseAnd ( N, K ) {
     return max
 }
 
-console.log( bitwiseAnd( 5, 2 ) );
-console.log( bitwiseAnd( 8, 5 ) );
-console.log( bitwiseAnd( 2, 2 ) );
+// console.log( bitwiseAnd( 5, 2 ) );
+// console.log( bitwiseAnd( 8, 5 ) );
+// console.log( bitwiseAnd( 2, 2 ) );
 
 // ###############################################################
