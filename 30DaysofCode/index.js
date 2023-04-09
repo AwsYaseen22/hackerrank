@@ -99,3 +99,37 @@ function main () {
 
 
 // ###############################################################
+
+// Day 29: Bitwise AND
+
+/*
+How bitwise & work:
+convert each number to binary
+compart each two bit from each binary 
+the create new number form the binary
+(4) => 00000000000000000000000000000100
+(5) => 00000000000000000000000000000101
+==================
+(4&5)=>00000000000000000000000000000100 => (4 in decimal)
+
+*/
+
+function bitwiseAnd ( N, K ) {
+    let max = -Infinity
+    for ( let i = 1; i <= N; i++ ) {
+        for ( let j = i + 1; j <= N; j++ ) {
+            // console.log( i & j );
+            let ij = i & j
+            if ( ij < K && ij > max ) {
+                max = ij
+            }
+        }
+    }
+    return max
+}
+
+console.log( bitwiseAnd( 5, 2 ) );
+console.log( bitwiseAnd( 8, 5 ) );
+console.log( bitwiseAnd( 2, 2 ) );
+
+// ###############################################################
