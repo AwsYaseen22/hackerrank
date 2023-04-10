@@ -24,6 +24,24 @@ class Difference {
     }
 }
 
+// ###############################################################
+
+// Day 21: Generics
+
+// function main () {
+//     function printArray<T> ( items: T[] ) {
+//         let length = 1
+//         while ( length ) {
+//             length = Number( readLine() )
+//             for ( let i = 0; i < length; i++ ) {
+//                 console.log( readLine() )
+//             }
+//         }
+//     }
+//     printArray( inputLines )
+// }
+
+
 
 // ###############################################################
 
