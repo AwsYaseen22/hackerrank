@@ -1,3 +1,32 @@
+// Day 14: Scope
+
+function main () {
+    // Enter your code here
+    let len = parseInt( readLine() );
+    const elements = readLine().split( " " ).map( ( n ) => parseInt( n ) )
+
+    const difference = new Difference( ...elements );
+    difference.computeDifference();
+
+    console.log( difference.maximumDifference );
+}
+
+class Difference {
+    maximumDifference: number
+    elements: number[]
+    constructor( ...elements: number[] ) {
+        this.elements = elements;
+    }
+    computeDifference () {
+        const min = Math.min( ...this.elements );
+        const max = Math.max( ...this.elements );
+        this.maximumDifference = max - min;
+    }
+}
+
+
+// ###############################################################
+
 // Day 25: Running Time and Complexity
 
 function processData ( input ) {
