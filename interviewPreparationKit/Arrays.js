@@ -1,7 +1,6 @@
 // 2D Array - DS
 
 function hourglassSum ( arr ) {
-    let max = Infinity
     let all = []
     for ( let i = 0; i < arr.length / 2 + 1; i++ ) {
         let hourGlass = []
