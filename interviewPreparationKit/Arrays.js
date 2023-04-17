@@ -24,4 +24,18 @@ let arr = [
     [0, 0, 0, 2, 0, 0],
     [0, 0, 1, 2, 4, 0],
 ]
-console.log( hourglassSum( arr ) );
+// console.log( hourglassSum( arr ) );
+
+// ###########################################################
+
+// Arrays: Left Rotation
+
+function rotLeft ( a, d ) {
+    // Write your code here
+    let chunck = a.splice( 0, d )
+    return a.concat( chunck )
+}
+
+// console.log( rotLeft( [1, 2, 3, 4, 5], 2 ) );
+
+// ###########################################################
