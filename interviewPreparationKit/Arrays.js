@@ -39,3 +39,36 @@ function rotLeft ( a, d ) {
 // console.log( rotLeft( [1, 2, 3, 4, 5], 2 ) );
 
 // ###########################################################
+
+// New Year Chaos
+
+/*
+ * Complete the 'minimumBribes' function below.
+ *
+ * The function accepts INTEGER_ARRAY q as parameter.
+ */
+
+// Write your code here
+function minimumBribes ( q ) {
+    let counter = 0;
+    for ( let i = q.length - 1; i >= 0; i-- ) {
+        if ( q[i] - i - 1 > 2 ) {
+            console.log( "Too chaotic" );
+            return;
+        }
+        let j = Math.max( 0, q[i] - 2 )
+        for ( ; j < i; j++ ) {
+            if ( q[j] > q[i] ) counter++;
+        }
+    }
+    console.log( counter );
+}
+
+// console.log( minimumBribes( [1, 2, 3, 5, 4, 6, 7, 8] ) );
+// console.log( minimumBribes( [4, 1, 2, 3] ) );
+// console.log( minimumBribes( [2, 1, 5, 3, 4] ) );
+// console.log( minimumBribes( [5, 1, 2, 3, 7, 8, 6, 4] ) );
+// console.log( minimumBribes( [1, 2, 5, 3, 4, 7, 8, 6] ) );
+
+
+// ###########################################################
