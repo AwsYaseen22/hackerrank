@@ -72,3 +72,23 @@ function minimumBribes ( q ) {
 
 
 // ###########################################################
+
+
+function minimumSwaps ( arr ) {
+    let counter = 0;
+    let i = 0;
+    while ( i < arr.length ) {
+        let cur = arr[i];
+        if ( cur - 1 != i ) {
+            [arr[cur - 1], arr[i]] = [arr[i], arr[cur - 1]]
+            counter++;
+        } else {
+            i++;
+        }
+    }
+    return counter;
+}
+
+// console.log( minimumSwaps( [7, 1, 3, 2, 4, 5, 6] ) );
+
+// ###########################################################
