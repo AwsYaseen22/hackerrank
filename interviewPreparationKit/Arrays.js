@@ -92,3 +92,58 @@ function minimumSwaps ( arr ) {
 // console.log( minimumSwaps( [7, 1, 3, 2, 4, 5, 6] ) );
 
 // ###########################################################
+
+// Array Manipulation
+
+/*
+ * Complete the 'arrayManipulation' function below.
+ *
+ * The function is expected to return a LONG_INTEGER.
+ * The function accepts following parameters:
+ *  1. INTEGER n
+ *  2. 2D_INTEGER_ARRAY queries
+ */
+
+function arrayManipulation ( n, queries ) {
+    // Write your code here
+    let arr = new Array( n ).fill( 0 )
+    let max = -Infinity
+    for ( let i = 0; i < queries.length; i++ ) {
+        let from = queries[i][0]
+        let to = queries[i][1]
+        let num = queries[i][2]
+        arr[from - 1] += num
+        arr[to] -= num
+    }
+    let cur = 0
+    for ( let i = 0; i < n; i++ ) {
+        cur += arr[i]
+        if ( cur > max ) {
+            max = cur
+        }
+    }
+    // arr = arr.map( ( e, i ) => {
+    //     if ( i >= from - 1 && i < to ) {
+    //         e += num
+    //         if ( e > max ) {
+    //             max = e
+    //         }
+    //     }
+    //     return e
+    // } )
+    // if ( from >= 1 && to <= arr.length ) {
+
+    // for ( let i = from - 1; i < to; i++ ) {
+    //     arr[i] += num
+    //     if ( arr[i] > max ) {
+    //         max = arr[i]
+    //     }
+    // }
+    // }
+
+    return max
+}
+
+// console.log( arrayManipulation( 10, [[1, 5, 3], [4, 8, 7], [6, 9, 1]] ) );
+
+// ###########################################################
