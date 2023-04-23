@@ -42,3 +42,27 @@ function makeAnagram ( a, b ) {
 // console.log( makeAnagram( 'cde', 'abc' ) );
 
 // ######################################################
+
+// Alternating Characters
+
+/*
+ * Complete the 'alternatingCharacters' function below.
+ *
+ * The function is expected to return an INTEGER.
+ * The function accepts STRING s as parameter.
+ */
+
+function alternatingCharacters ( s ) {
+    // Write your code here
+    let counter = 0
+    for ( let i = 1; i < s.length; i++ ) {
+        if ( s[i - 1] === s[i] ) {
+            counter++
+        }
+    }
+    return counter
+}
+
+// console.log( alternatingCharacters( 'AAABBB' ) );
+
+// ######################################################
