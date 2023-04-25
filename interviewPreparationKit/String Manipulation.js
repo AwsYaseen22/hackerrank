@@ -110,3 +110,36 @@ function isValid ( s ) {
 // console.log( isValid( 'aabbc' ) )
 
 // ######################################################
+
+// Special String Again
+
+// Complete the substrCount function below.
+function substrCount ( n, s ) {
+    let counter = n
+    for ( let i = 0; i < n; i++ ) {
+        let same = 0
+        while ( s[i + 1] && s[i] === s[i + 1] ) {
+            same++
+            i++
+        }
+        counter += ( same * ( same + 1 ) ) / 2
+        let index = 1
+        // reverse
+        while ( i - index >= 0 && i + index < n && s[i + index] === s[i - 1] && s[i - index] === s[i - 1] ) {
+            counter++
+            index++
+        }
+    }
+    return counter
+}
+
+
+
+
+// console.log( substrCount( 8, 'mnonopoo' ) );
+// console.log( substrCount( 5, 'asasd' ) );
+// console.log( substrCount( 7, 'abcbaba' ) );
+console.log( substrCount( 4, 'aaaa' ) );
+// console.log( substrCount( 4, 'aasaas' ) );
+
+// ######################################################
