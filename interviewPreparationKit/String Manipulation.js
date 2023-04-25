@@ -66,3 +66,47 @@ function alternatingCharacters ( s ) {
 // console.log( alternatingCharacters( 'AAABBB' ) );
 
 // ######################################################
+
+// Sherlock and the Valid String
+
+/*
+ * Complete the 'isValid' function below.
+ *
+ * The function is expected to return a STRING.
+ * The function accepts STRING s as parameter.
+ */
+
+function isValid ( s ) {
+    let obj = s.split( '' ).reduce( ( acc, cur ) => {
+        acc[cur] ? acc[cur]++ : acc[cur] = 1
+        return acc
+    }, {} )
+    let arr = Object.values( obj ).sort( ( a, b ) => a - b )
+    // console.log( arr );
+    let fi = arr[0]
+    let se = arr[1]
+    let la = arr[arr.length - 1]
+    let bla = arr[arr.length - 2]
+    if ( arr.length === 1 ) {
+        return 'YES'
+    }
+    if ( fi === la ) {
+        return 'YES'
+    }
+    if ( fi === 1 && se === la ) {
+        return 'YES'
+    }
+    if ( fi === se && se === bla && bla + 1 === la ) {
+        return 'YES'
+    }
+    return 'NO'
+}
+
+// console.log( isValid( 'aabbcc' ), 'YES' );
+// console.log( isValid( 'aabbcd' ), 'NO' );
+// console.log( isValid( 'aabbccddeefghi' ), 'NO' );
+// console.log( isValid( 'abcdefghhgfedecba' ), 'YES' );
+// console.log( isValid( 'aabbc' ), 'YES' );
+// console.log( isValid( 'aabbc' ) )
+
+// ######################################################
